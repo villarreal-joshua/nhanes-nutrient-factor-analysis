@@ -1,25 +1,42 @@
-# Nutrient Composition Covariance & Cognitive Function (NHANES)
+# Nutrient Composition & Cognitive Function Analysis (NHANES)
 
 ## Overview
-This project investigates how nutrients co-occur in dietary patterns and whether those latent dietary patterns are associated with cognitive performance.
+This project investigates how nutrients co-occur in broader dietary patterns and whether those dietary patterns are associated with cognitive performance in adults.
 
-Using NHANES 2013–2014 data, we applied factor analysis to nutrient intake variables to extract interpretable dietary factors and then evaluated associations with a composite cognitive score.
+Using NHANES 2013–2014 dietary and cognitive function data, factor analysis was applied to reduce high-dimensional nutrient intake variables into interpretable latent dietary factors. Regression modeling was then used to evaluate associations between extracted dietary patterns and composite cognitive performance scores.
 
 ## Data
 - NHANES 2013–2014 dietary intake data
-- Cognitive function measures (standardized tests combined into a composite score)
-- Selected 26 nutrient variables (filtered from a larger set for interpretability and to reduce redundancy)
+- Cognitive function assessment data
+- 26 selected nutrient variables including macronutrients, vitamins, minerals, cholesterol, and caffeine
 
-## Methodology
-- Principal factor extraction
-- Varimax rotation for interpretability
-- Factor selection using scree plot, eigenvalues (> 1), and residual diagnostics (RMS off-diagonal residuals)
-- Regression modeling of cognitive composite score on extracted dietary factors
+## Methods
+- Principal Factor Analysis (PFA)
+- Varimax rotation
+- Scree plot and eigenvalue-based factor selection
+- Composite cognitive score standardization
+- Multivariate regression modeling
+
+The final model identified 6 interpretable dietary patterns representing broader nutritional behaviors.
 
 ## Key Findings
-Several extracted dietary patterns showed statistically significant (but modest) associations with cognitive performance. Patterns related to processed/animal protein, fiber-rich foods, and fruits/vegetables were positively associated, while sugars and caffeine patterns were not significant.
+Several extracted dietary patterns showed modest but statistically significant associations with cognitive performance outcomes. Patterns associated with fiber-rich foods, fruits & vegetables, and protein-dense dietary structures demonstrated positive associations with cognitive function scores.
 
 ## Tools Used
-- SAS (PROC FACTOR, regression procedures)
-- Factor analysis and diagnostics
-- Regression modeling
+- SAS
+- SAS Studio
+- PROC FACTOR
+- PROC REG
+
+## Current Enhancements
+Current improvements in progress include:
+- Incorporating 2-day averaged dietary recall data
+- Adding total caloric intake covariates
+- Adding demographic control variables
+- Expanding regression diagnostics and model robustness checks
+
+## Repository Contents
+- SAS analysis code
+- Factor analysis output
+- Regression diagnostics
+- Project write-up
